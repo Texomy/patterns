@@ -1,10 +1,9 @@
-imports:
-  - 'numbers.yml'
+imports: numbers
 
-classes:
+types:
 
   Currency:
-    Usd: [ '\$' ]
-    Eur: [ '€' ]
+    Usd: '\$'
+    Eur: '€'
 
-  Money: [ '~$1' ]
+  Money: '~$1'

@@ -1,14 +1,13 @@
-imports:
-  - numbers.yml
+imports: numbers
 
-classes:
+types:
 
   Units:
     British:
       Foot: [ 'foot', 'feet', 'ft' ]
-      Inch: [ 'inch(es)?' ]
+      Inch: 'inch(es)?'
     SI:
       Meter: [ 'meters?', 'metres?' ]
       Centimeter: [ 'centimeters?', 'centimetres?' ]
 
-  Measurement: [ '~1 meter' ]
+  Measurement: '~1 meter'

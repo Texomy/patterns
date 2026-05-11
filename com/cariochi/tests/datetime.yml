@@ -1,7 +1,6 @@
-imports:
-  - numbers.yml
+imports: numbers
 
-classes:
+types:
 
   Date:
     - '~(?<year>2000)-(?<month>05)-(<?day>10)'
@@ -9,22 +8,22 @@ classes:
     - '~(?<month>November) (?<day>1)(?:st|nd|rd|th)?, (?<year>1991)'
 
   Month:
-    JAN: [ 'January' ]
-    FEB: [ 'February' ]
-    MAR: [ 'March' ]
-    APR: [ 'April' ]
-    MAY: [ 'May' ]
-    JUN: [ 'June' ]
-    JUL: [ 'July' ]
-    AUG: [ 'August' ]
-    SEP: [ 'September' ]
-    OCT: [ 'October' ]
-    NOV: [ 'November' ]
-    DEC: [ 'December' ]
+    JAN: 'January'
+    FEB: 'February'
+    MAR: 'March'
+    APR: 'April'
+    MAY: 'May'
+    JUN: 'June'
+    JUL: 'July'
+    AUG: 'August'
+    SEP: 'September'
+    OCT: 'October'
+    NOV: 'November'
+    DEC: 'December'
 
   TimePeriod:
-    AM: [ 'AM' ]
-    PM: [ 'PM' ]
+    AM: 'AM'
+    PM: 'PM'
 
   Time:
     - '~(?<hours>1):(?<minutes>30)\s?(?<period>AM)'
