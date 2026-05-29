@@ -1,12 +1,10 @@
-types:
+Number:
+  Real: '\d+\.\d+'
+  Integer: [ '\d+', '~1 thousand' ]
 
-  Number:
-    Real: '\d+\.\d+'
-    Integer: [ '\d+', '~1 thousand' ]
+Multiplier:
+  E3: 'thousand'
+  E6: 'million'
+  E9: 'billion'
 
-  Multiplier:
-    E3: 'thousand'
-    E6: 'million'
-    E9: 'billion'
-
-  Percent: '~100%'
+Percent: '~100%'

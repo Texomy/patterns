@@ -1,13 +1,11 @@
-imports: numbers
+$imports: numbers
 
-types:
+Units:
+  British:
+    Foot: [ 'foot', 'feet', 'ft' ]
+    Inch: 'inch(es)?'
+  SI:
+    Meter: [ 'meters?', 'metres?' ]
+    Centimeter: [ 'centimeters?', 'centimetres?' ]
 
-  Units:
-    British:
-      Foot: [ 'foot', 'feet', 'ft' ]
-      Inch: 'inch(es)?'
-    SI:
-      Meter: [ 'meters?', 'metres?' ]
-      Centimeter: [ 'centimeters?', 'centimetres?' ]
-
-  Measurement: '~1 meter'
+Measurement: '~1 meter'

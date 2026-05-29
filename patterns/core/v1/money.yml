@@ -1,9 +1,7 @@
-imports: numbers
+$imports: numbers
 
-types:
+Currency:
+  Usd: '\$'
+  Eur: '€'
 
-  Currency:
-    Usd: '\$'
-    Eur: '€'
-
-  Money: '~$1'
+Money: '~$1'

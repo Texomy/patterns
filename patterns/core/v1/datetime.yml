@@ -1,30 +1,28 @@
-imports: numbers
+$imports: numbers
 
-types:
+Date:
+  - '~(?<year>2000)-(?<month>05)-(<?day>10)'
+  - '~(?<month>07)/(?<day>12)/(?<year>2020)'
+  - '~(?<month>November) (?<day>1)(?:st|nd|rd|th)?, (?<year>1991)'
 
-  Date:
-    - '~(?<year>2000)-(?<month>05)-(<?day>10)'
-    - '~(?<month>07)/(?<day>12)/(?<year>2020)'
-    - '~(?<month>November) (?<day>1)(?:st|nd|rd|th)?, (?<year>1991)'
+Month:
+  JAN: 'January'
+  FEB: 'February'
+  MAR: 'March'
+  APR: 'April'
+  MAY: 'May'
+  JUN: 'June'
+  JUL: 'July'
+  AUG: 'August'
+  SEP: 'September'
+  OCT: 'October'
+  NOV: 'November'
+  DEC: 'December'
 
-  Month:
-    JAN: 'January'
-    FEB: 'February'
-    MAR: 'March'
-    APR: 'April'
-    MAY: 'May'
-    JUN: 'June'
-    JUL: 'July'
-    AUG: 'August'
-    SEP: 'September'
-    OCT: 'October'
-    NOV: 'November'
-    DEC: 'December'
+TimePeriod:
+  AM: 'AM'
+  PM: 'PM'
 
-  TimePeriod:
-    AM: 'AM'
-    PM: 'PM'
-
-  Time:
-    - '~(?<hours>1):(?<minutes>30)\s?(?<period>AM)'
-    - '~(?<hours>13):(?<minutes>00)'
+Time:
+  - '~(?<hours>1):(?<minutes>30)\s?(?<period>AM)'
+  - '~(?<hours>13):(?<minutes>00)'
