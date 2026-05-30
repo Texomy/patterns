@@ -1,4 +1,9 @@
-$import: currencies
+$import: number
+
+Currency:
+  USD: [ '\$', 'USD', 'US\$' ]
+  EUR: [ '€', 'EUR' ]
+  GBP: [ '£', 'GBP' ]
 
 Money:
   - '(?<currency>${Currency})\s*(?<amount>${Number})'
