@@ -1,4 +1,4 @@
-$imports: numbers
+$import: numbers
 
 Date:
   - '~(?<year>2000)-(?<month>05)-(<?day>10)'
