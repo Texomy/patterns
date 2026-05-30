@@ -1,8 +1,8 @@
 $import: numbers
 
 Currency:
-  USD: '\$'
-  EUR: '€'
-  GBP: '£'
+  USD: [ '\$', 'USD', 'US\$' ]
+  EUR: [ '€', 'EUR' ]
+  GBP: [ '£', 'GBP' ]
 
 Money: '~€1'

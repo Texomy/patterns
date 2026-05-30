@@ -1,6 +1,6 @@
 Number:
-  Real: '\d+\.\d+'
-  Integer: [ '\d+', '~1 thousand' ]
+  Integer: [ '\d+(,\d{3})*', '~1 thousand' ]
+  Decimal: '${-Integer}\.${-Integer}'
 
 Multiplier:
   E3: 'thousand'

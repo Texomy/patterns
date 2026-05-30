@@ -1,9 +1,9 @@
 $import: numbers
 
 Date:
-  - '~(?<year>2000)-(?<month>05)-(<?day>10)'
-  - '~(?<month>07)/(?<day>12)/(?<year>2020)'
-  - '~(?<month>November) (?<day>1)(?:st|nd|rd|th)?, (?<year>1991)'
+  - '(?<year>${Integer})-(?<month>${Integer})-(<?day>${Integer})'
+  - '(?<month>${Integer})/(?<day>${Integer})/(?<year>${Integer})'
+  - '~(?<month>${Month}) (?<day>${Integer})(?:st|nd|rd|th)?, (?<year>${Integer})'
 
 Month:
   JAN: 'January'
@@ -24,5 +24,5 @@ TimePeriod:
   PM: 'PM'
 
 Time:
-  - '~(?<hours>1):(?<minutes>30)\s?(?<period>AM)'
-  - '~(?<hours>13):(?<minutes>00)'
+  - '(?<hours>${Integer}):(?<minutes>${Integer})\s?(?<period>${TimePeriod})'
+  - '(?<hours>${Integer}):(?<minutes>${Integer})'

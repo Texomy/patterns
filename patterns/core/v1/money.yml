@@ -1,7 +1,5 @@
-$import: numbers
+$import: currencies
 
-Currency:
-  Usd: '\$'
-  Eur: '€'
-
-Money: '~$1'
+Money:
+  - '(?<currency>${Currency})\s*(?<amount>${Number})'
+  - '(?<amount>${Number})\s*(?<currency>${Currency})'
