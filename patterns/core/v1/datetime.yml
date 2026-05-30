@@ -1,7 +1,7 @@
 $import: numbers
 
 Date:
-  - '(?<year>${Integer})-(?<month>${Integer})-(<?day>${Integer})'
+  - '(?<year>${Integer})-(?<month>${Integer})-(?<day>${Integer})'
   - '(?<month>${Integer})/(?<day>${Integer})/(?<year>${Integer})'
   - '(?<month>${Month}) (?<day>${Integer})(?:st|nd|rd|th)?, (?<year>${Integer})'
 
