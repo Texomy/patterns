@@ -1,10 +1,10 @@
 Number:
-  Integer: [ '\d+(,\d{3})*', '~1 thousand' ]
-  Decimal: '${-Integer}\.${-Integer}'
+  Integer: [ '\d+(,\d{3})*', '~1 (?<multiplier>thousand)' ]
+  Decimal: '${Integer}\.${Integer}'
 
 Multiplier:
   E3: 'thousand'
   E6: 'million'
   E9: 'billion'
 
-Percent: '~100%'
+Percent: '~(?<value>100)%'

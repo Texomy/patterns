@@ -8,4 +8,4 @@ Units:
     Meter: [ 'meters?', 'metres?' ]
     Centimeter: [ 'centimeters?', 'centimetres?' ]
 
-Measurement: '~1 meter'
+Measurement: '~(?<value>1) (?<units>meter)'
