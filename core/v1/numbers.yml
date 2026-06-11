@@ -1,5 +1,5 @@
 Number:
-  Integer: [ '\d+(,\d{3})*', '~1 (?<multiplier>thousand)' ]
+  Integer: [ '\d+(,\d{3})*', '~(?<value>1) (?<multiplier>thousand)' ]
   Decimal: '${Integer}\.${Integer}'
 
 Multiplier:

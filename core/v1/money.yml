@@ -6,5 +6,5 @@ Currency:
   GBP: [ '£', 'GBP' ]
 
 Money:
-  - '(?<currency>${Currency})\s*(?<amount>${Number})'
-  - '(?<amount>${Number})\s*(?<currency>${Currency})'
+  - '${Currency:currency}\s*${Number:amount}'
+  - '${Number:amount}\s*${Currency:currency}'
