@@ -1,8 +1,8 @@
 Number:
-  Integer: [ '\d+(,\d{3})*', '~(?<value>1) (?<magnitude>thousand)' ]
+  Integer: [ '\d+(,\d{3})*', '~(?<value>1) (?<scale>thousand)' ]
   Decimal: '${Integer}\.${Integer}'
 
-Magnitude:
+Scale:
   Thousand: 'thousand'
   Million: 'million'
   Billion: 'billion'
