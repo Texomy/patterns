@@ -1,10 +1,18 @@
-Number:
-  Integer: [ '\d+(,\d{3})*', '~(?<value>1) (?<scale>thousand)' ]
-  Decimal: '${Integer}\.${Integer}'
-
 Scale:
   Thousand: 'thousand'
   Million: 'million'
   Billion: 'billion'
 
-Percent: '~(?<value>100)%'
+Number:
+  Decimal: '\d+(,\d{3})*\.\d+'
+  Integer: 
+    $fields:
+      value: Number
+      scale: Scale
+    $match:
+      - '\d+(,\d{3})*'
+      - '#{value} #{scale}'
+
+Percent: 
+  $fields: { value: Number }
+  $match: '#{value}%'

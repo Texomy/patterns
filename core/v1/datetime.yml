@@ -1,10 +1,5 @@
 $import: numbers
 
-Date:
-  - '${Integer:year}-${Integer:month}-${Integer:day}'
-  - '${Integer:month}/${Integer:day}/${Integer:year}'
-  - '${Month:month} ${Integer:day}(?:st|nd|rd|th)?, ${Integer:year}'
-
 Month:
   JAN: 'January'
   FEB: 'February'
@@ -18,11 +13,35 @@ Month:
   OCT: 'October'
   NOV: 'November'
   DEC: 'December'
+ 
+Date:
+
+  ISO:
+    $fields:
+      year: { $type: Integer, $match: '\d{4}' }
+      month: { $type: Integer, $match: '0[1-9]|1[0-2]' }
+      day: { $type: Integer, $match: '0[1-9]|[12]\d|3[01]' }
+    $match:
+      - '#{year}-#{month}-#{day}'
+      - '#{month}/#{day}/#{year}'
+      - '#{day}-#{month}-#{year}'
+
+  Textual:
+    $fields:
+      year: { $type: Integer, $match: '\d{4}' }
+      month: Month
+      day: { $type: Integer, $match: '[1-9]|[12]\d|3[01]' }
+    $match: '#{month} #{day}(st|nd|rd|th)?, #{year}'
 
 TimePeriod:
   AM: 'AM'
   PM: 'PM'
 
 Time:
-  - '${Integer:hours}:${Integer:minutes}\s?${TimePeriod:period}'
-  - '${Integer:hours}:${Integer:minutes}'
+  $fields:
+    hours: Integer
+    minutes: Integer
+    period: TimePeriod
+  $match:
+    - '#{hours}:#{minutes}\s?#{period}'
+    - '#{hours}:#{minutes}'

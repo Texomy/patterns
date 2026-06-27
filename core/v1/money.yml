@@ -6,5 +6,9 @@ Currency:
   GBP: [ '£', 'GBP' ]
 
 Money:
-  - '${Currency:currency}\s*${Number:amount}'
-  - '${Number:amount}\s*${Currency:currency}'
+  $fields:
+    currency: Currency
+    amount: Number
+  $match:
+    - '#{currency}\s*#{amount}'
+    - '#{amount}\s*#{currency}'
