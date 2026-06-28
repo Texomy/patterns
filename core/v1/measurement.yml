@@ -1,4 +1,4 @@
-$import: numbers
+$imports: numbers
 
 Units:
   British:

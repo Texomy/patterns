@@ -5,14 +5,14 @@ Scale:
 
 Number:
   Decimal: '\d+(,\d{3})*\.\d+'
-  Integer: 
+  Integer:
     $fields:
       value: Number
       scale: Scale
-    $match:
+    $patterns:
       - '\d+(,\d{3})*'
       - '#{value} #{scale}'
 
-Percent: 
+Percent:
   $fields: { value: Number }
-  $match: '#{value}%'
+  $patterns: '#{value}%'

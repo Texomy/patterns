@@ -1,4 +1,4 @@
-$import: numbers
+$imports: numbers
 
 Month:
   JAN: 'January'
@@ -18,20 +18,20 @@ Date:
 
   ISO:
     $fields:
-      year: { $type: Integer, $match: '\d{4}' }
-      month: { $type: Integer, $match: '0[1-9]|1[0-2]' }
-      day: { $type: Integer, $match: '0[1-9]|[12]\d|3[01]' }
-    $match:
+      year: { $type: Integer, $patterns: '\d{4}' }
+      month: { $type: Integer, $patterns: '0[1-9]|1[0-2]' }
+      day: { $type: Integer, $patterns: '0[1-9]|[12]\d|3[01]' }
+    $patterns:
       - '#{year}-#{month}-#{day}'
       - '#{month}/#{day}/#{year}'
       - '#{day}-#{month}-#{year}'
 
   Textual:
     $fields:
-      year: { $type: Integer, $match: '\d{4}' }
+      year: { $type: Integer, $patterns: '\d{4}' }
       month: Month
-      day: { $type: Integer, $match: '[1-9]|[12]\d|3[01]' }
-    $match: '#{month} #{day}(st|nd|rd|th)?, #{year}'
+      day: { $type: Integer, $patterns: '[1-9]|[12]\d|3[01]' }
+    $patterns: '#{month} #{day}(st|nd|rd|th)?, #{year}'
 
 TimePeriod:
   AM: 'AM'
@@ -42,6 +42,6 @@ Time:
     hours: Integer
     minutes: Integer
     period: TimePeriod
-  $match:
+  $patterns:
     - '#{hours}:#{minutes}\s?#{period}'
     - '#{hours}:#{minutes}'
