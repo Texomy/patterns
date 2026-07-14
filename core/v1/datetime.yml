@@ -16,7 +16,7 @@ Month:
  
 Date:
 
-  ISO:
+  IsoDate:
     $fields:
       year: { $type: Integer, $patterns: '\d{4}' }
       month: { $type: Integer, $patterns: '0[1-9]|1[0-2]' }
@@ -26,7 +26,7 @@ Date:
       - '#{month}/#{day}/#{year}'
       - '#{day}-#{month}-#{year}'
 
-  Textual:
+  TextualDate:
     $fields:
       year: { $type: Integer, $patterns: '\d{4}' }
       month: Month

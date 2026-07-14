@@ -1,10 +1,10 @@
 $imports: numbers
 
 Units:
-  British:
+  BritishUnits:
     Foot: [ 'foot', 'feet', 'ft' ]
     Inch: 'inch(es)?'
-  SI:
+  SiUnits:
     Meter: [ 'meters?', 'metres?' ]
     Centimeter: [ 'centimeters?', 'centimetres?' ]
 
